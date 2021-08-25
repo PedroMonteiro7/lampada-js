@@ -26,12 +26,25 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    gap: 20px;
 }
 
 button {
     width: 100px;
     height: 40px;
     cursor: pointer; /* "mãozinha" */
+}
+
+#ligar {
+    background-color: rgb(202, 255, 202);
+    border: solid 1px rgb(151, 194, 151);
+    border-radius: 5px;
+}
+
+#desligar {
+    background-color: rgb(255, 202, 202);
+    border: solid 1px rgb(194, 151, 151);
+    border-radius: 5px;
 }
 
 img {
