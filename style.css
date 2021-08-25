@@ -18,6 +18,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Rampart One', cursive;
+    font-size: 23px;
 }
 
 main {
@@ -27,6 +29,7 @@ main {
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
+    margin-top: 50px;
 }
 
 button {
@@ -35,16 +38,23 @@ button {
     cursor: pointer; /* "mãozinha" */
 }
 
+button:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+} 
+
 #ligar {
     background-color: rgb(202, 255, 202);
     border: solid 1px rgb(151, 194, 151);
     border-radius: 5px;
+    color: rgb(108, 138, 108);
 }
 
 #desligar {
     background-color: rgb(255, 202, 202);
     border: solid 1px rgb(194, 151, 151);
     border-radius: 5px;
+    color: rgb(151, 97, 97);
 }
 
 img {
@@ -56,4 +66,5 @@ footer {
     justify-content: center;
     align-items: flex-start;
     font-style: italic;
+    font-size: 20px;
 }
