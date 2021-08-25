@@ -41,9 +41,20 @@ function quebrarLampada() {
     botoesLigaDesliga(true, true)
 }
 
+function piscarLampada() {
+    const lampada = document.getElementById('lampada')
+    const botaoPiscar = document.getElementById('piscar')
+
+        lampada.src = "img/ligada.jpg"
+       botoesLigaDesliga(true, false)
+       lampada.src = "img/desligada.jpg"
+        
+}
+
 // eventos
 id('ligar').addEventListener('click', ligarLampada)
 id('desligar').addEventListener('click', desligarLampada)
 id('lampada').addEventListener('mouseover', ligarLampada)
 id('lampada').addEventListener('mouseleave', desligarLampada)
 id('lampada').addEventListener('dblclick', quebrarLampada)
+id('piscar').addEventListener('click', piscarLampada)
