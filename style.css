@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    cursor: pointer; /* "mãozinha" */
+}
+
+img {
+    cursor: pointer;
+}
+
+footer {
+    height: 75px;
+    justify-content: center;
+    align-items: flex-start;
+    font-style: italic;
+}
