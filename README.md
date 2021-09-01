@@ -7,7 +7,9 @@ O projeto consiste em criar uma lâmpada com três ações:
 
 * Desligar;
 
-* Quebrar.
+* Quebrar;
+
+* Piscar.
 
 Todo o código foi construído seguindo boas práticas, como responsabilidade única e funções puras.
 
