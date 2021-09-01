@@ -3,16 +3,18 @@
 let idLigar
 let idDesligar
 
-function pararDePiscar() {
+const pararDePiscar = () => {
     clearInterval(idLigar)
     clearInterval(idDesligar)
 }
 
-function id(elemento) {
-    return document.getElementById(elemento)
-}
+// function id(elemento) {
+//     return document.getElementById(elemento)
+// }
 
-function botoesLigaDesligaPisca(estadoLiga, estadoDesliga, estadoPisca) {
+const id = (elemento) => document.getElementById(elemento)
+
+const botoesLigaDesligaPisca = (estadoLiga, estadoDesliga, estadoPisca) => {
     const botaoLigar = document.getElementById('ligar')
     const botaoDesligar = document.getElementById('desligar')
     const botaoPiscar = document.getElementById('piscar')
@@ -21,12 +23,14 @@ function botoesLigaDesligaPisca(estadoLiga, estadoDesliga, estadoPisca) {
     botaoPiscar.disabled = estadoPisca
 }
 
-function lampadaQuebrada() {
-    const lampada = document.getElementById('lampada')
-    return lampada.src.indexOf('quebrada') !== -1 //indexOf procura uma String dentro de um caminho
-}
+// function lampadaQuebrada() {
+//     const lampada = document.getElementById('lampada')
+//     return lampada.src.indexOf('quebrada') !== -1 //indexOf procura uma String dentro de um caminho
+// }
 
-function ligarLampada() {
+const lampadaQuebrada = () => lampada.src.includes('quebrada')
+
+const ligarLampada = () => {
     const lampada = document.getElementById('lampada')
 
     if (!lampadaQuebrada()) {
@@ -35,7 +39,7 @@ function ligarLampada() {
     }
 }
 
-function desligarLampada() {
+const desligarLampada = () => {
     const lampada = document.getElementById('lampada')
 
     if (!lampadaQuebrada()) {
@@ -44,14 +48,14 @@ function desligarLampada() {
     }
 }
 
-function quebrarLampada() {
+const quebrarLampada = () => {
     const lampada = document.getElementById('lampada')
 
     lampada.src = "img/quebrada.jpg"
     botoesLigaDesliga(true, true, true)
 }
 
-function piscarLampada() {
+const piscarLampada = () => {
     const botaoPiscar = document.getElementById('piscar')
 
     if (botaoPiscar.textContent == 'Piscar') {
