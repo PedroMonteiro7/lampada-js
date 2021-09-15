@@ -6,6 +6,7 @@ let idDesligar
 function pararDePiscar() {
     clearInterval(idLigar)
     clearInterval(idDesligar)
+    let botaoPiscar = document.getElementById('piscar').className = 'piscar'
 }
 
 function id(elemento) {
@@ -52,12 +53,13 @@ function quebrarLampada() {
 }
 
 function piscarLampada() {
-    const botaoPiscar = document.getElementById('piscar')
+    let botaoPiscar = document.getElementById('piscar')
 
     if (botaoPiscar.textContent == 'Piscar') {
     idLigar = setInterval(ligarLampada, 500)
     idDesligar = setInterval(desligarLampada, 1000)
     botaoPiscar.textContent = 'Parar'
+    botaoPiscar = document.getElementById('piscar').className = 'piscar-vermelho'
     } else {
         pararDePiscar()
         botaoPiscar.textContent = 'Piscar'
