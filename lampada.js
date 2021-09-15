@@ -3,18 +3,16 @@
 let idLigar
 let idDesligar
 
-const pararDePiscar = () => {
+function pararDePiscar() {
     clearInterval(idLigar)
     clearInterval(idDesligar)
 }
 
-// function id(elemento) {
-//     return document.getElementById(elemento)
-// }
+function id(elemento) {
+    return document.getElementById(elemento)
+}
 
-const id = (elemento) => document.getElementById(elemento)
-
-const botoesLigaDesligaPisca = (estadoLiga, estadoDesliga, estadoPisca) => {
+function botoesLigaDesligaPisca(estadoLiga, estadoDesliga, estadoPisca) {
     const botaoLigar = document.getElementById('ligar')
     const botaoDesligar = document.getElementById('desligar')
     const botaoPiscar = document.getElementById('piscar')
@@ -23,14 +21,12 @@ const botoesLigaDesligaPisca = (estadoLiga, estadoDesliga, estadoPisca) => {
     botaoPiscar.disabled = estadoPisca
 }
 
-// function lampadaQuebrada() {
-//     const lampada = document.getElementById('lampada')
-//     return lampada.src.indexOf('quebrada') !== -1 //indexOf procura uma String dentro de um caminho
-// }
+function lampadaQuebrada() {
+    const lampada = document.getElementById('lampada')
+    return lampada.src.indexOf('quebrada') !== -1 //indexOf procura uma String dentro de um caminho
+}
 
-const lampadaQuebrada = () => lampada.src.includes('quebrada')
-
-const ligarLampada = () => {
+function ligarLampada() {
     const lampada = document.getElementById('lampada')
 
     if (!lampadaQuebrada()) {
@@ -39,7 +35,7 @@ const ligarLampada = () => {
     }
 }
 
-const desligarLampada = () => {
+function desligarLampada() {
     const lampada = document.getElementById('lampada')
 
     if (!lampadaQuebrada()) {
@@ -48,14 +44,14 @@ const desligarLampada = () => {
     }
 }
 
-const quebrarLampada = () => {
+function quebrarLampada() {
     const lampada = document.getElementById('lampada')
 
     lampada.src = "img/quebrada.jpg"
     botoesLigaDesliga(true, true, true)
 }
 
-const piscarLampada = () => {
+function piscarLampada() {
     const botaoPiscar = document.getElementById('piscar')
 
     if (botaoPiscar.textContent == 'Piscar') {
