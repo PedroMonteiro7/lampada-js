@@ -13,4 +13,4 @@ O projeto consiste em criar uma lâmpada com três ações:
 
 Todo o código foi construído seguindo boas práticas, como responsabilidade única e funções puras.
 
-![](img/projeto.jpg)
+![](img/projeto1.jpg)
